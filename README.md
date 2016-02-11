@@ -1,7 +1,7 @@
 ## [Explanations](explanations/)
 * [What is a backend and why do I need one?](explanations/backend.md)
 * [What is JSON?](explanations/json.md)
-* [What is asynchronous code execution and how do Javascript promises work?](explantions/asynchronous_promises.md)
+* [What is asynchronous code execution?](explantions/asynchronous_promises.md)
 
 ## [Firebase Tutorial](firebase/README.md)
 

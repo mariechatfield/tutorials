@@ -158,7 +158,7 @@ It adds the exact same object to your Firebase! Again. That's kind of cool. But 
 
 We can keep refreshing this page forever but it's just going to keep adding the exact same recommendation to our database over and over again. We probably want users to be able to give us some data. So let's make a form!
 
-**PAUSE POINT:** [What is asynchronous code execution and how do Javascript promises work?](../explanations/asynchronous_promises.md)
+**PAUSE POINT:** [What is asynchronous code execution?](../explanations/asynchronous_promises.md)
 
 ####[application.html](code_samples/v2/application.html)
 ```html
