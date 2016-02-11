@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <!-- Load the Firebase library before loading the body. -->
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+
+    <!-- Load the jQuery library, which we'll use to manipulate HTML elements with Javascript. -->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+    <!-- Load Bootstrap stylesheet, which will is CSS that makes everything prettier and also responsive (aka will work on all devices of all sizes). -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <!-- Load the application script, which will save data to our Firebase app when we click the button. -->
+    <script src="application.js"></script>
+
+    <div class="container">
+      <h1>Talks You Should Watch</h1>
+
+      <h3>Last Talk Proposed</h3>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Presenter</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- This is empty for now, but it will be filled out by an event handler in application.js with the most recent recommendation data from Firebase. -->
+            <td id="title"></td>
+            <td id="presenter"></td>
+            <td><a id="link" target="_blank"></a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Submit a Talk</h3>
+
+      <form id="recommendationForm">
+        <div class="form-group">
+          <label for="talkTitle">Title</label>
+          <input class="form-control" id="talkTitle" placeholder="Title of the talk">
+        </div>
+
+        <div class="form-group">
+          <label for="talkPresenter">Presenter</label>
+          <input class="form-control" id="talkPresenter" placeholder="Name of the presenter">
+        </div>
+
+        <div class="form-group">
+          <label for="talkLink">Link</label>
+          <input type="url" class="form-control" id="talkLink" placeholder="Link to a recording of the talk">
+        </div>
+
+        <!-- When you click this button, trigger the submit event on this form. -->
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
