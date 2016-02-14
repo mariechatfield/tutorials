@@ -2,13 +2,13 @@
 
 ## Table of Contents
 
-1. [Setup your first Firebase application](tutorials/step1_setup.md)
-2. [Write some data manually in the Firebase Dashboard](tutorials/step2_write_data_manually.md)
+1. [Setup your first Firebase application](steps/step1_setup.md)
+2. [Write some data manually in the Firebase Dashboard](steps/step2_write_data_manually.md)
 3. [Write some hard-coded data via the Javascript Library
-](tutorials/step3_write_hard_coded_data.md)
-4. [Write user-generated data](tutorials/step4_write_dynamic_data.md)
-5. [Read user-generated data](tutorials/step5_read_dynamic_data.md)
-6. [Advanced topics in data wizardry](tutorials/step6_advanced_topics.md)
+](steps/step3_write_hard_coded_data.md)
+4. [Write user-generated data](steps/step4_write_dynamic_data.md)
+5. [Read user-generated data](steps/step5_read_dynamic_data.md)
+6. [Advanced topics in data wizardry](steps/step6_advanced_topics.md)
 
 ## What You Should Know Before You Begin
 
