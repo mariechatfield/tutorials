@@ -20,12 +20,11 @@ At some point, the request will complete and will return our data. But there's n
 
 Instead of trying to get the data back to the original code to do something with it, we tell the asynchronous function what to do when it completes.
 
-![Promises Diagram](images/diagram_async_03.png)
+![Asynchronous Diagram with Callback](images/diagram_async_03.png)
 
-This usually looks like passing a callback function as an argument.
+In Javascript, this usually looks like passing a callback function as an argument.
 
 ```javascript
-
 var do_something_cool = function (result) {
     console.log(result);
 };

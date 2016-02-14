@@ -16,7 +16,7 @@ Writing data is pretty cool, but users probably also want to read some of the da
 
 Go ahead and open up **application.html** and **application.js** from the [`code_samples/v3`](../code_samples/v3) directory.
 
-Need a refresher on how to download these files? Check out [Step3](step3_write_hard_coded_data.md) — but make sure you download the `v3` versions.
+Need a refresher on how to download these files? Check out [Step 3](step3_write_hard_coded_data.md) — but make sure you download the `v3` versions.
 
 ####[application.html](../code_samples/v3/application.html)
 ```html
@@ -85,7 +85,7 @@ Need a refresher on how to download these files? Check out [Step3](step3_write_h
 </html>
 ```
 
-Once again, this is mostly the same as `v2` but we did add an extra table to the `body` of **application.html**:
+Once again, this is mostly the same as `v2` but we did add an extra table to the `<body>` of **application.html**:
 
 ```html
       <h3>Last Talk Proposed</h3>
@@ -187,6 +187,8 @@ recommendations.limitToLast(1).on('child_added', function(childSnapshot) {
 });
 ```
 
+That `.on()` method should look familiar to you if you did the extra credit in Step 3! You might have already used jQuery's `.on()` method to attach event listeners to other objects. This one is a Firebase method that is attaching an event listener to your Firebase object. Learn more about it in the [`Firebase.on()` documentation](https://www.firebase.com/docs/web/api/query/on.html).
+
 When you reload **application.html**, it should look something like this.
 
 ![Read first recommendation data](../images/screenshot_read_recommendation.png)
@@ -200,6 +202,9 @@ IT REFRESHES! And shows that one. Open **application.html** in another window an
 ![Read another recommendation](../images/screenshot_read_another.png)
 
 Look at that asynchronous code execution wizardry. You are a data magician already.
+
+| ![Pause Point](../images/pause_point.png) | You are reading and writing real-time user-generated data to a database in the cloud!| 
+| --- | --- |
 
 ### EXTRA CREDIT
 
@@ -225,6 +230,8 @@ Look at that asynchronous code execution wizardry. You are a data magician alrea
 ## AFTER
 
 You can use the [jQuery](https://jquery.com/) library to edit the content of HTML elements in response to events.
+
+You can attach event listeners using the [jQuery](https://jquery.com/) library and the [Firebase](https://www.firebase.com/docs/web/) library to listen for interesting events and perform actions in response to them.
 
 You can read user-generated data from your database in real-time.
 

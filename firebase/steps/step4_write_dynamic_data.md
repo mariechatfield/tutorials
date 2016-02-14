@@ -4,7 +4,7 @@
 
 | You should... | What to Review |
 |------------|--------|
-| ...be able to view and edit the provided code samples on your computer. | [Step3](step3_write_hard_coded_data.md) |
+| ...be able to view and edit the provided code samples on your computer. | [Step 3](step3_write_hard_coded_data.md) |
 | ...be able to write hard-coded data to your Firebase database using the Javascript library. | [Step 3](step3_write_hard_coded_data.md) |
 | ...know **your-firebase-app**, the unique description of your database. | [Step 1](step1_setup.md) |
 | ...understand the basics of how clients (like websites) interact with a backend to access data. | [What is a backend and why do I need one?](../../explanations/backend.md) |
@@ -19,12 +19,9 @@ It adds the exact same object to your Firebase! Again. That's kind of cool. But 
 
 We can keep refreshing this page forever but it's just going to keep adding the exact same recommendation to our database over and over again. We probably want users to be able to give us some data. So let's make a form!
 
-| ![Pause Point](../images/pause_point.png) | [What is asynchronous code execution?](../../explanations/asynchronous.md) |
-| --- | --- |
-
 Go ahead and open up **application.html** and **application.js** from the [`code_samples/v2`](../code_samples/v2) directory.
 
-Need a refresher on how to download these files? Check out [Step3](step3_write_hard_coded_data.md) — but make sure you download the `v2` versions.
+Need a refresher on how to download these files? Check out [Step 3](step3_write_hard_coded_data.md) — but make sure you download the `v2` versions.
 
 ####[application.html](../code_samples/v2/application.html)
 ```html
@@ -153,6 +150,21 @@ $(window).load(function () {
 });
 ```
 
+What's with that last bit of Javascript, with the `$(window).load` and functions inside of functions?
+
+| ![Pause Point](../images/pause_point.png) | [What is asynchronous code execution?](../../explanations/asynchronous.md) |
+| --- | --- |
+
+We want to actually submit our recommendation to the database whenever the form is submitted. We use jQuery to listen for the `submit` event on our form. Whenever that event is triggered (by someone clicking the submit button), jQuery responds by calling the handler function we define — which in this case is `submitRecommendation`.
+
+In order to actually attach our event listener to the form, we first have to be able to find the form with jQuery. If this Javascript is running before all the HTML elements on our page are fully loaded, the form might not exist yet and we won't be able to attach our event listener to it.
+
+So, we wait until the window (the page in your browser) is fully loaded with the asynchronous function `$(window).load`. We pass a callback function to `$(window).load` that jQuery calls when the window is loaded. Inside that callback function, we find our form using jQuery and then attach an event listener on the `submit` event.
+
+Want to learn more about how events work in jQuery? Check out this excellent introduction: [Events and Event Delegation](http://jqfundamentals.com/chapter/events).
+
+**Back to our regular programming:**
+
 Refresh **application.html** again. This time, it shouldn't auto-save any data to your Firebase. What you'll see looks a lot prettier, thanks to Bootstrap.
 
 ![Blank form](../images/screenshot_blank_form.png)
@@ -165,6 +177,9 @@ When you submit the form, it should clear all the fields, and save your user-gen
 
 ![Saved the user provided data](../images/screenshot_user_provided_data_highlight.png)
 
+| ![Pause Point](../images/pause_point.png) | You just wrote user-generated data to a database in the cloud! |
+| --- | --- |
+
 ### EXTRA CREDIT
 
 1. For every additional field you defined on recommendations in the [Step 3 Extra Credit](step3_write_hard_coded_data.md), add an additional input to the `recommendationsForm` HTML.
@@ -173,10 +188,10 @@ When you submit the form, it should clear all the fields, and save your user-gen
 2. For every additional form input you add, use jQuery to get its value and then send that value to your database.
     - [jQuery selectors](http://www.w3schools.com/jquery/jquery_ref_selectors.asp) - explains how to select different HTML elements using jQuery
     - [.val()](http://api.jquery.com/val/) - documentation for the `.val()` method of jQuery, commonly used to get or set values of HTML elements
-3. Add a button outside of the form that, when clicked, sends the form's input to the databse. See if you can do this **without** rewriting anything inside `submitRecommendations`.
+3. Add a button outside of the form that, when clicked, sends the form's input to the databse. See if you can do this **without** rewriting any of the code inside `submitRecommendations`.
     - [Events and Event Delegation](http://jqfundamentals.com/chapter/events) - excellent introduction to how events work in jQuery
     - [jQuery events](https://api.jquery.com/category/events/) - documentation about all the methods of jQuery related to events
-4. Add a button that resets the form, and clears all the values in the inputs. See helpful reading for the previous challenges.
+4. Add a button that resets the form, and clears all the values in the inputs.
 5. Determine if a recommendation was saved successfully or if there was an error. Display a message to the user with either a success message or an error message.
     - [Firebase.push()](https://www.firebase.com/docs/web/api/firebase/push.html) - documentation on the `push()` method
 

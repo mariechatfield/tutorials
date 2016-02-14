@@ -1,4 +1,4 @@
-# Step 2: Write some data manually in the Firebase Dashboard
+# Step 2: Write data manually in the Firebase Dashboard
 
 ## BEFORE
 
@@ -13,7 +13,7 @@ Right now, your database is pretty empty. All it contains is a reference to your
 
 ![My First App Dashboard](../images/screenshot_empty_db.png)
 
-Everything in Firebase is organized in a hierarchy under this starting reference, as a single JSON object. A helpful way to think of your Firebase database is as a single object, with other objects nested inside it.
+Everything in Firebase is organized in a hierarchy under this starting reference, as a single JSON object with other JSON objects and data nested inside it.
 
 | ![Pause Point](../images/pause_point.png) | [What is JSON?](../../explanations/json.md) |
 | --- | --- |
@@ -36,13 +36,14 @@ Don't see the green plus? You may need to hover your mouse over **your-firebase-
 ![Adding maintainers list](../images/screenshot_add_maintainers.png)
 
 For **name**, add the key: ```maintainers```
+
 For **value**, add the entire value object: ```["marie", "femmehacks"]``` 
 
 Once we save, we can see that the maintainers list is now in our database! The box might show up with a green highlight at first, indicating that the data has just been added.
 
 ![Saved maintainers list](../images/screenshot_save_maintainers.png)
 
-If you click on **maintainers**, you should be directed to **your-firebase-app.firebase.io/maintainers**.
+If you click on **maintainers**, you should be directed to **your-firebase-app.firebaseio.com/maintainers**.
 
 ![Maintainers dashboard](../images/screenshot_maintainers.png)
 
@@ -54,7 +55,7 @@ Instead of seeing the entire database, this Dashboard allows us to inspect only 
 2. Edit a name in the **maintainers** array
 3. Delete a name from the **maintainers** array
 4. Add another object to the top level of **your-firebase-app**
-5. Figure out what URL you would need to create to link directly to one of the names in the **maintainers** array
+5. Figure out what URL you would need to link directly to one of the names in the **maintainers** array
 
 ## AFTER
 
@@ -64,4 +65,4 @@ You can link directly to a nested object in your database.
 
 *Be careful manipulating data through Dashboard once you populate your database with real data!* You don't want to accidentally ruin or delete the data that makes your application useful to users.
 
-**Step 3:** [Write some hard-coded data via the Javascript Library](step3_write_hard_coded_data.md)
+**Step 3:** [Write hard-coded data via the Javascript Library](step3_write_hard_coded_data.md)

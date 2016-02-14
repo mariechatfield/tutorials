@@ -1,4 +1,4 @@
-# Step 3: Write some hard-coded data via the Javascript Library
+# Step 3: Write hard-coded data via the Javascript Library
 
 ## BEFORE
 
@@ -26,7 +26,7 @@ We probably want to assign each recommendation a unique ID so that we can keep t
 
 ![Recommendation object diagram](../images/diagram_app_recommendations.png)
 
-If we wanted to represent a particular talk recommendation as a JSON object, we could write:
+If we wanted to represent my talk recommendation above as a JSON object, we could write:
 
 ```json
 {
@@ -127,7 +127,7 @@ And it added a really funky string thing. That's the unique URL of the recommend
 var myFirstRecommendation = new Firebase("https://REPLACE-ME-WITH-YOUR-FIREBASE-APP-NAME.firebaseio.com/recommendations/-KA3ASkQXzynnbFBCbjr");
 ```
 
-And if we navigate to that page in our browser, we can see that object in our Dashboard.
+And if we navigate to that URL in our browser, we can see that object in our Dashboard.
 
 ![First recommendation](../images/screenshot_first_recommendation.png)
 
@@ -148,6 +148,6 @@ And if we navigate to that page in our browser, we can see that object in our Da
 
 You can run and develop a simple website locally.
 
-You can write hard-coded data to your database using the Firebase library.
+You can write hard-coded data to your database using the Firebase Javascript library.
 
-**Step 4:** [Write some user-generated data](step4_write_dynamic_data.md)
+**Step 4:** [Write user-generated data](step4_write_dynamic_data.md)
