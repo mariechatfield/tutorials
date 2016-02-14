@@ -4,7 +4,7 @@
 
 | You should... | What to Review |
 |------------|--------|
-| ...be able to view and edit the provided code samples on your computer. | [Step3](step3_write_hard_coded_data.md) |
+| ...be able to view and edit the provided code samples on your computer. | [Step 3](step3_write_hard_coded_data.md) |
 | ...understand the basics of asynchronous code exection. | [What is asynchronous code execution?](../../explanations/asynchronous.md) | 
 | ...be able to write user-generated data to your Firebase database using the Javascript library. | [Step 4](step4_write_dynamic_data.md) |
 | ...know **your-firebase-app**, the unique description of your database. | [Step 1](step1_setup.md) |
@@ -85,6 +85,30 @@ Need a refresher on how to download these files? Check out [Step3](step3_write_h
 </html>
 ```
 
+Once again, this is mostly the same as `v2` but we did add an extra table to the `body` of **application.html**:
+
+```html
+      <h3>Last Talk Proposed</h3>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Presenter</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- This is empty for now, but it will be filled out by an event handler in application.js with the most recent recommendation data from Firebase. -->
+            <td id="title"></td>
+            <td id="presenter"></td>
+            <td><a id="link" target="_blank"></a></td>
+          </tr>
+        </tbody>
+      </table>
+```
+
 ####[application.js](../code_samples/v3/application.js)
 ```javascript
 // TODO: Replace with your Firebase app
@@ -138,6 +162,28 @@ $(window).load(function () {
   // event is triggered on that element, call submitRecommendation.
   $("#recommendationForm").submit(submitRecommendation);
 
+});
+```
+
+Most of **application.js** is the same as `v2`, but we did add one function:
+
+```javascript
+// Get the single most recent recommendation from the database and
+// update the table with its values. This is called every time the child_added
+// event is triggered on the recommendations Firebase reference, which means
+// that this will update EVEN IF you don't refresh the page. Magic.
+recommendations.limitToLast(1).on('child_added', function(childSnapshot) {
+  // Get the recommendation data from the most recent snapshot of data
+  // added to the recommendations list in Firebase
+  recommendation = childSnapshot.val();
+
+  // Update the HTML to display the recommendation text
+  $("#title").html(recommendation.title)
+  $("#presenter").html(recommendation.presenter)
+  $("#link").html(recommendation.link)
+
+  // Make the link actually work and direct to the URL provided
+  $("#link").attr("href", recommendation.link)
 });
 ```
 

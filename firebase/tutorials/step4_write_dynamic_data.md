@@ -73,6 +73,48 @@ Need a refresher on how to download these files? Check out [Step3](step3_write_h
 </html>
 ```
 
+Most of this is the same as `v1/application.html`.
+
+In the `<head>`, we load a few more static assets:
+
+```html
+    <!-- Load the jQuery library, which we'll use to manipulate HTML elements with Javascript. -->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+    <!-- Load Bootstrap stylesheet, which will is CSS that makes everything prettier and also responsive (aka will work on all devices of all sizes). -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+```
+
+And in the `<body>`, we add a form:
+
+```html
+    <div class="container">
+      <h1>Talks You Should Watch</h1>
+
+      <h3>Submit a Talk</h3>
+
+      <form id="recommendationForm">
+        <div class="form-group">
+          <label for="talkTitle">Title</label>
+          <input class="form-control" id="talkTitle" placeholder="Title of the talk">
+        </div>
+
+        <div class="form-group">
+          <label for="talkPresenter">Presenter</label>
+          <input class="form-control" id="talkPresenter" placeholder="Name of the presenter">
+        </div>
+
+        <div class="form-group">
+          <label for="talkLink">Link</label>
+          <input type="url" class="form-control" id="talkLink" placeholder="Link to a recording of the talk">
+        </div>
+
+        <!-- When you click this button, trigger the submit event on this form. -->
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+```
+
 ####[application.js](../code_samples/v2/application.js)
 ```javascript
 // TODO: Replace with your Firebase app

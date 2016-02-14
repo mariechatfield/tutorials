@@ -55,7 +55,7 @@ Those libraries are built to abstract away the details of Firebase's REST API. Y
     - [Firebase.goOnline()](https://www.firebase.com/docs/web/api/firebase/goonline.html) - documentation on the `goOnline()` method of Firebase's Javascript library
     - [Firebase Pricing](https://www.firebase.com/pricing.html) - explanation of limits on free tier
 
-### EXTRA CREDIT
+### EXTRA, EXTRA CREDIT
 
 Made it this far? Here are some more ideas for cool things you can do with your website using Firebase. Have fun!
 
