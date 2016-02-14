@@ -61,7 +61,7 @@ Made it this far? Here are some more ideas for cool things you can do with your 
 
 1. Allow users to set up their own username and display the username of a user along with their recommendation.
 2. Allow users to see all their previous recommendations in one place.
-3. Allow users to edit one of thier previous recommendations (but prevent them from editing any recommendation they did not originally submit).
+3. Allow users to edit one of their previous recommendations (but prevent them from editing any recommendation they did not originally submit).
 4. Allow users to toggle a setting so that their recommendations are private (i.e. no one but that user can read their recommendations).
 5. Add a field to each recommendation indicating a vote score and allow users to "upvote". You'll need to watch out for race conditions, and make sure that only one request can edit the score of a recommendation at a time. (Hint: check out [`Firebase.transaction()`](https://www.firebase.com/docs/web/api/firebase/transaction.html))
 
