@@ -2,6 +2,8 @@
 
 Use Firebase to create a simple database without having to write any server-side code. Don't have any web development experience? No problem! Use the provided code samples and make them your own.
 
+*This tutorial was originally developed as a workshop for [FemmeHacks](http://femmehacks.io/) 2016.*
+
 ## Table of Contents
 
 1. [Setup your first Firebase application](steps/step1_setup.md)
