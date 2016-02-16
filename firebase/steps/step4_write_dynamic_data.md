@@ -188,7 +188,7 @@ When you submit the form, it should clear all the fields, and save your user-gen
 2. For every additional form input you add, use jQuery to get its value and then send that value to your database.
     - [jQuery selectors](http://www.w3schools.com/jquery/jquery_ref_selectors.asp) - explains how to select different HTML elements using jQuery
     - [.val()](http://api.jquery.com/val/) - documentation for the `.val()` method of jQuery, commonly used to get or set values of HTML elements
-3. Add a button outside of the form that, when clicked, sends the form's input to the databse. See if you can do this **without** rewriting any of the code inside `submitRecommendations`.
+3. Add a button outside of the form that, when clicked, sends the form's input to the database. See if you can do this **without** rewriting any of the code inside `submitRecommendations`.
     - [Events and Event Delegation](http://jqfundamentals.com/chapter/events) - excellent introduction to how events work in jQuery
     - [jQuery events](https://api.jquery.com/category/events/) - documentation about all the methods of jQuery related to events
 4. Add a button that resets the form, and clears all the values in the inputs.
@@ -201,7 +201,7 @@ You understand the basics of [asynchronous code execution](../../explanations/as
 
 You can use the [jQuery](https://jquery.com/) library to select and manipulate HTML elements.
 
-You can use the [Bootstrap](http://getbootstrap.com/) framework to style HTML elemnts.
+You can use the [Bootstrap](http://getbootstrap.com/) framework to style HTML elements.
 
 You can write dynamic, user-generated data to your database.
 

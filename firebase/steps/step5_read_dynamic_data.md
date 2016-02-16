@@ -5,7 +5,7 @@
 | You should... | What to Review |
 |------------|--------|
 | ...be able to view and edit the provided code samples on your computer. | [Step 3](step3_write_hard_coded_data.md) |
-| ...understand the basics of asynchronous code exection. | [What is asynchronous code execution?](../../explanations/asynchronous.md) | 
+| ...understand the basics of asynchronous code execution. | [What is asynchronous code execution?](../../explanations/asynchronous.md) |
 | ...be able to write user-generated data to your Firebase database using the Javascript library. | [Step 4](step4_write_dynamic_data.md) |
 | ...know **your-firebase-app**, the unique description of your database. | [Step 1](step1_setup.md) |
 | ...understand the basics of how clients (like websites) interact with a backend to access data. | [What is a backend and why do I need one?](../../explanations/backend.md) |

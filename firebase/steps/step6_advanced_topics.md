@@ -5,7 +5,7 @@
 | You should... | What to Review |
 |------------|--------|
 | ...be able to read and write real-time user-generated data to your Firebase database using the Javascript library. | [Step 5](step5_read_dynamic_data.md) |
-| ...understand the basics of asynchronous code exection. | [What is asynchronous code execution?](../../explanations/asynchronous.md) | 
+| ...understand the basics of asynchronous code execution. | [What is asynchronous code execution?](../../explanations/asynchronous.md) | 
 | ...understand the basics of how clients (like websites) interact with a backend to access data. | [What is a backend and why do I need one?](../../explanations/backend.md) |
 
 ## DURING
