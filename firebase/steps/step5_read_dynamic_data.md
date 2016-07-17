@@ -23,7 +23,7 @@ Need a refresher on how to download these files? Check out [Step 3](step3_write_
 <html>
   <head>
     <!-- Load the Firebase library before loading the body. -->
-    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
 
     <!-- Load the jQuery library, which we'll use to manipulate HTML elements with Javascript. -->
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
@@ -111,11 +111,22 @@ Once again, this is mostly the same as `v2` but we did add an extra table to the
 
 ####[application.js](../code_samples/v3/application.js)
 ```javascript
-// TODO: Replace with your Firebase app
-var myFirebaseApp = "REPLACE-ME-WITH-YOUR-FIREBASE-APP-NAME";
+// TODO: Replace with your project's config object. You can find this
+// by navigating to your project's console overview page
+// (https://console.firebase.google.com/project/your-project-id/overview)
+// and clicking "Add Firebase to your web app"
+var config = {
+  apiKey: "<your-api-key>",
+  authDomain: "<your-project-id>.firebaseapp.com",
+  databaseURL: "https://<your-project-id>.firebaseio.com",
+  storageBucket: "<your-project-id>.appspot.com",
+};
 
-// Reference to the recommendations object in your Firebase
-var recommendations = new Firebase("https://" + myFirebaseApp + ".firebaseio.com/recommendations");
+// Initialize your Firebase app
+firebase.initializeApp(config);
+
+// Reference to the recommendations object in your Firebase database
+var recommendations = firebase.database().ref("recommendations");
 
 // Save a new recommendation to the database, using the input in the form
 var submitRecommendation = function () {
@@ -187,7 +198,7 @@ recommendations.limitToLast(1).on('child_added', function(childSnapshot) {
 });
 ```
 
-That `.on()` method should look familiar to you if you did the extra credit in Step 3! You might have already used jQuery's `.on()` method to attach event listeners to other objects. This one is a Firebase method that is attaching an event listener to your Firebase object. Learn more about it in the [`Firebase.on()` documentation](https://www.firebase.com/docs/web/api/query/on.html).
+That `.on()` method should look familiar to you if you did the extra credit in Step 3! You might have already used jQuery's `.on()` method to attach event listeners to other objects. This one is a Firebase method that is attaching an event listener to your Firebase object. Learn more about it in the [`Reference.on()` documentation](https://firebase.google.com/docs/reference/js/firebase.database.Reference#on).
 
 When you reload **application.html**, it should look something like this.
 
@@ -231,7 +242,7 @@ Look at that asynchronous code execution wizardry. You are a data magician alrea
 
 You can use the [jQuery](https://jquery.com/) library to edit the content of HTML elements in response to events.
 
-You can attach event listeners using the [jQuery](https://jquery.com/) library and the [Firebase](https://www.firebase.com/docs/web/) library to listen for interesting events and perform actions in response to them.
+You can attach event listeners using the [jQuery](https://jquery.com/) library and the [Firebase](https://firebase.google.com/docs/reference/js/) library to listen for interesting events and perform actions in response to them.
 
 You can read user-generated data from your database in real-time.
 

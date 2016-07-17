@@ -183,7 +183,7 @@ So if we wanted to link directly to that object, we could open __https://your-pr
 ### EXTRA CREDIT
 
 1. Move **application.js** to a different directory than **application.html** and figure out how to change the HTML file so that it still loads your Javascript.
-2. Define `recommendations` in a single line of Javascript, instead of two. (Hint: read the documentation for the [`ref` method](https://firebase.google.com/docs/reference/js/firebase.database.Reference).)
+2. Define `recommendations` in a single line of Javascript, instead of two. (Hint: read the documentation for Firebase's [`database.Reference` objects](https://firebase.google.com/docs/reference/js/firebase.database.Reference).)
 3. Add another field to each recommendations object and update the Javascript to send this new field. Some ideas:
     * a number rating of the talk on a scale of 1 to 5
     * a text description of the talk

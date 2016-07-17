@@ -204,7 +204,7 @@ When you submit the form, it should clear all the fields, and save your user-gen
     - [jQuery events](https://api.jquery.com/category/events/) - documentation about all the methods of jQuery related to events
 4. Add a button that resets the form, and clears all the values in the inputs.
 5. Determine if a recommendation was saved successfully or if there was an error. Display a message to the user with either a success message or an error message.
-    - [Firebase.push()](https://firebase.google.com/docs/reference/js/firebase.database.Reference#push) - documentation on the `push()` method
+    - [database.Reference.push()](https://firebase.google.com/docs/reference/js/firebase.database.Reference#push) - documentation on the `push()` method
 
 ## AFTER
 

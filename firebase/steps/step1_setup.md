@@ -7,7 +7,7 @@
 
 ## DURING
 
-Go to the [Firebase website](https://www.firebase.com/account) and sign up for an account if you don't already have one. You can log in with a Google account for easy access.
+Go to the [Firebase website](https://firebase.google.com/) and sign up for an account if you don't already have one. You can log in with a Google account for easy access.
 
 When you log in, you should be directed to the Firebase console. You can manage all of your projects here. Go ahead and create a new one by clicking the blue **CREATE NEW PROJECT** button.
 

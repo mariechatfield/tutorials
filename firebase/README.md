@@ -29,7 +29,7 @@ Use Firebase to create a simple database without having to write any server-side
 
 ## Technologies Used
 
-* [Firebase](https://www.firebase.com/)
+* [Firebase](https://firebase.google.com/)
 * [HTML](http://www.w3schools.com/html/html_intro.asp)
 * [Javascript](https://www.javascript.com/)
 * [jQuery](https://jquery.com/)
