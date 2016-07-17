@@ -1,8 +1,19 @@
-// TODO: Replace with your Firebase app
-var myFirebaseApp = "REPLACE-ME-WITH-YOUR-FIREBASE-APP-NAME";
+// TODO: Replace with your project's config object. You can find this
+// by navigating to your project's console overview page
+// (https://console.firebase.google.com/project/your-project-id/overview)
+// and clicking "Add Firebase to your web app"
+var config = {
+  apiKey: "<your-api-key>",
+  authDomain: "<your-project-id>.firebaseapp.com",
+  databaseURL: "https://<your-project-id>.firebaseio.com",
+  storageBucket: "<your-project-id>.appspot.com",
+};
 
-// Reference to the recommendations object in your Firebase
-var recommendations = new Firebase("https://" + myFirebaseApp + ".firebaseio.com/recommendations");
+// Initialize your Firebase app
+firebase.initializeApp(config);
+
+// Reference to the recommendations object in your Firebase database
+var recommendations = firebase.database().ref("recommendations");
 
 // Save a new recommendation to the database, using the input in the form
 var submitRecommendation = function () {

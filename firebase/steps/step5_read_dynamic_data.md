@@ -7,7 +7,7 @@
 | ...be able to view and edit the provided code samples on your computer. | [Step 3](step3_write_hard_coded_data.md) |
 | ...understand the basics of asynchronous code execution. | [What is asynchronous code execution?](../../explanations/asynchronous.md) |
 | ...be able to write user-generated data to your Firebase database using the Javascript library. | [Step 4](step4_write_dynamic_data.md) |
-| ...know **your-firebase-app**, the unique description of your database. | [Step 1](step1_setup.md) |
+| ...know **your-project-id**, the unique description of your database. | [Step 1](step1_setup.md) |
 | ...understand the basics of how clients (like websites) interact with a backend to access data. | [What is a backend and why do I need one?](../../explanations/backend.md) |
 
 ## DURING
@@ -219,10 +219,10 @@ Look at that asynchronous code execution wizardry. You are a data magician alrea
 **WARNING: The next two challenges are _super_ spicy.** Before you attempt these challenges, you should complete all previous challenges in Steps 3-5.
 
 1. Display the last three recommendations, instead of just the last one.
-    - [Firebase Query](https://www.firebase.com/docs/web/api/query/) - documentation on how queries work in Firebase
-    - [Firebase.on()](https://www.firebase.com/docs/web/api/query/on.html) - documentation on the types of Firebase events you can listen for using the `.on()` method of the Firebase library
-    - [Firebase.limitToLast()](https://www.firebase.com/docs/web/api/query/limittolast.html) - documentation on limiting the number of events received from a Firebase event listener
-    - [Firebase DataSnapshot](https://www.firebase.com/docs/web/api/datasnapshot/) - documentation on `DataSnapshot`, which is the type of object that Firebase Queries pass to callbacks
+    - [Firebase Query](https://firebase.google.com/docs/reference/js/firebase.database.Query) - documentation on how queries work in Firebase
+    - [database.Reference.on()](https://firebase.google.com/docs/reference/js/firebase.database.Reference#on) - documentation on the types of Firebase events you can listen for using the `.on()` method of a Firebase Reference
+    - [database.Reference.limitToLast()](https://firebase.google.com/docs/reference/js/firebase.database.Reference#limitToLast) - documentation on limiting the number of events received from a Firebase Reference event listener
+    - [Firebase DataSnapshot](https://firebase.google.com/docs/reference/js/firebase.database.DataSnapshot) - documentation on `DataSnapshot`, which is the type of object that Firebase Queries pass to callbacks
 2. Add an input which allows the user to specify an arbitrary number of the most recent recommendations to show. So if the user selects 5, display the last 2 recommendations. If the user selects 2, display the last 2 recommendations.
     - [jQuery DOM Insertion](http://api.jquery.com/category/manipulation/dom-insertion-inside/) - jQuery methods that allow you to insert content inside an existing HTML element
     - [jQuery DOM Removal](http://api.jquery.com/category/manipulation/dom-removal/) - jQuery methods that allow you to remove HTML elements and/or their content
