@@ -8,7 +8,7 @@ next_step: step2.html
 ## BEFORE
 
 |---
-| ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | [What is a backend and why do I need one?]({{ site.baseurl }}/explanations/backend.html) |
+| ![Pause Point]({{site.baseurl}}/assets/general/pause_point.png) | [What is a backend and why do I need one?]({{ site.baseurl }}/explanations/backend.html) |
 
 ## DURING
 

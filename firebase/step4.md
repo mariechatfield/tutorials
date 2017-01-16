@@ -172,7 +172,7 @@ $(window).load(function () {
 What's with that last bit of Javascript, with the `$(window).load` and functions inside of functions?
 
 |---
-| ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | [What is asynchronous code execution?]({{site.baseurl}}/explanations/asynchronous-code.html) |
+| ![Pause Point]({{site.baseurl}}/assets/general/pause_point.png) | [What is asynchronous code execution?]({{site.baseurl}}/explanations/asynchronous-code.html) |
 
 We want to actually submit our recommendation to the database whenever the form is submitted. We use jQuery to listen for the `submit` event on our form. Whenever that event is triggered (by someone clicking the submit button), jQuery responds by calling the handler function we define — which in this case is `submitRecommendation`.
 
@@ -197,7 +197,7 @@ When you submit the form, it should clear all the fields, and save your user-gen
 ![Saved the user provided data]({{site.baseurl}}/assets/firebase/screenshot_add_user_generated_data.png)
 
 |---
-| ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | You just wrote user-generated data to a database in the cloud! |
+| ![Pause Point]({{site.baseurl}}/assets/general/pause_point.png) | You just wrote user-generated data to a database in the cloud! |
 
 ### EXTRA CREDIT
 

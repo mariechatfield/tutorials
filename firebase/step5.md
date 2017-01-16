@@ -223,7 +223,7 @@ IT REFRESHES! And shows that one. Open **application.html** in another window an
 Look at that asynchronous code execution wizardry. You are a data magician already.
 
 |---
-| ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | You are reading and writing real-time user-generated data to a database in the cloud!| 
+| ![Pause Point]({{site.baseurl}}/assets/general/pause_point.png) | You are reading and writing real-time user-generated data to a database in the cloud!|
 
 ### EXTRA CREDIT
 

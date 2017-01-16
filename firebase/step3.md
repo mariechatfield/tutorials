@@ -186,7 +186,7 @@ So if we wanted to link directly to that object, we could open __https://your-pr
 ![First recommendation]({{site.baseurl}}/assets/firebase/screenshot_first_recommendation.png)
 
 |---
-| ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | You just wrote data to a database in the cloud. That's so legit. If you've never done that before, go tweet about it or something. |
+| ![Pause Point]({{site.baseurl}}/assets/general/pause_point.png) | You just wrote data to a database in the cloud. That's so legit. If you've never done that before, go tweet about it or something. |
 
 ### EXTRA CREDIT
 
