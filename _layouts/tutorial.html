@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="post tutorial">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+
+    <p class="post-meta">Quick Links:
+      {% if page.tutorial_overview %}<a href="{{site.baseurl}}/{{page.tutorial_overview}}">Tutorial Overview</a> • {% endif %}
+      {% if page.previous_step %}<a href="{{page.previous_step}}">Previous Step</a>{% endif %}
+      {% if page.previous_step and page.next_step %} • {% endif %}
+      {% if page.next_step %}<a href="{{page.next_step}}">Next Step</a>{% endif %}
+    </p>
+  </header>
+
+  <article class="post-content">
+    {% if page.description %}
+      <p>{{page.description}}</p>
+    {% endif %}
+
+    {{ content }}
+  </article>
+
+</div>

@@ -1,0 +1,24 @@
+# Site settings
+title: tutorials by marie
+description: >
+  Tutorials and explanations by Marie Chatfield. Follow along with workshops,
+  or proceed at your own pace.
+baseurl: "/tutorials"
+url: "http://mariechatfield.com"
+twitter_username: mariechatfield
+github_username:  mchat
+personal_website: mariechatfield.com
+
+# Build settings
+markdown: redcarpet
+
+redcarpet:
+  extensions: ["tables", "with_toc_data"]
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      display_in_nav: false

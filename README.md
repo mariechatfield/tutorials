@@ -1,5 +1,7 @@
 # Tutorials
 
+## Rendered at: http://mariechatfield.com/tutorials
+
 ## Statement of Purpose (in haiku)
 
 I love to learn things.
@@ -7,17 +9,6 @@ I love to learn things.
 I learn new things all the time.
 
 Learn along with me.
-
-## Table of Contents
-
-### [Explanations](explanations/)
-* [What is a backend and why do I need one?](explanations/backend.md)
-* [What is JSON?](explanations/json.md)
-* [What is asynchronous code execution?](explanations/asynchronous.md)
-
-### [Firebase Tutorial](firebase/README.md)
-
-Use Firebase to create a simple database without having to write any server-side code. Don't have any web development experience? No problem! Use the provided code samples and make them your own.
 
 ## Comments & Feedback
 

@@ -1,18 +1,23 @@
-# Firebase Tutorial
-
-Use Firebase to create a simple database without having to write any server-side code. Don't have any web development experience? No problem! Use the provided code samples and make them your own.
+---
+layout: tutorial
+title:  "Firebase Tutorial"
+categories: firebase
+next_step: /tutorials/firebase/step1.html
+is_overview: true
+description: "Use Firebase to create a simple database without having to write any server-side code. Don't have any web development experience? No problem! Use the provided code samples and make them your own."
+---
 
 *This tutorial was originally developed as a workshop for [FemmeHacks](http://femmehacks.io/) 2016.*
 
 ## Table of Contents
 
-1. [Setup your first Firebase application](steps/step1_setup.md)
-2. [Write data manually in the Firebase Dashboard](steps/step2_write_data_manually.md)
+1. [Setup your first Firebase application](step1.html)
+2. [Write data manually in the Firebase Dashboard](step2.html)
 3. [Write hard-coded data via the Javascript Library
-](steps/step3_write_hard_coded_data.md)
-4. [Write user-generated data](steps/step4_write_dynamic_data.md)
-5. [Read user-generated data](steps/step5_read_dynamic_data.md)
-6. [Advanced topics in data wizardry](steps/step6_advanced_topics.md)
+](step3.html)
+4. [Write user-generated data](step4.html)
+5. [Read user-generated data](step5.html)
+6. [Advanced topics in data wizardry](step6.html)
 
 ## What You Should Know Before You Begin
 

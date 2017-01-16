@@ -1,26 +1,31 @@
-# Step 2: Write data manually in the Firebase Dashboard
-
+---
+layout: tutorial
+title:  "Firebase | Step 2: Write data manually in the Firebase Dashboard"
+tutorial_overview: firebase
+previous_step: step1.html
+next_step: step3.html
+---
 ## BEFORE
 
 | You should... | What to Review |
-|------------|--------|
-| ...be looking at your project's Database console.| [Step 1](step1_setup.md) |
-| ...know **your-project-id**, the unique description of your database.| [Step 1](step1_setup.md) |
+|------------ |-------- |
+| ...be looking at your project's Database console.| [Step 1](step1.html) |
+| ...know **your-project-id**, the unique description of your database.| [Step 1](step1.html) |
 
 ## DURING
 
 Right now, your database is pretty empty. All it contains is a reference to your database (**your-project-id**), which points to a null (empty) object.
 
-![My First App Dashboard](../images/screenshot_empty_db.png)
+![My First App Dashboard]({{site.baseurl}}/assets/firebase/screenshot_empty_db.png)
 
 Everything in Firebase is organized in a hierarchy under this starting reference, as a single JSON object with other JSON objects and data nested inside it.
 
-| ![Pause Point](../images/pause_point.png) | [What is JSON?](../../explanations/json.md) |
+| ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | [What is JSON?]({{ site.baseurl }}/explanations/json.html) |
 | --- | --- |
 
 Let's add some data. For now, we just want to keep track of who is maintaining this database. We can think of this as an array of names:
 
-![Maintainers list diagram](../images/diagram_app_maintainers.png)
+![Maintainers list diagram]({{site.baseurl}}/assets/firebase/diagram_app_maintainers.png)
 
 ```json
 "maintainers": [
@@ -33,7 +38,7 @@ Let's add some data. For now, we just want to keep track of who is maintaining t
 
 Don't see the green plus? You may need to hover your mouse over **your-project-id** to make the edit box appear. When you do, you should see a new row appear with two empty text boxes: one for **name** and one for **value**.
 
-![Adding data manually](../images/screenshot_add_data.png)
+![Adding data manually]({{site.baseurl}}/assets/firebase/screenshot_add_data.png)
 
 For **name**, add the key: ```maintainers```
 
@@ -41,15 +46,15 @@ For **value**, add the entire value object: ```["marie", "femmehacks"]```
 
 Make sure that you use quotes (```"```) around each name in your value object.
 
-![Adding maintainers information](../images/screenshot_add_maintainers.png)
+![Adding maintainers information]({{site.baseurl}}/assets/firebase/screenshot_add_maintainers.png)
 
 Once we save the new data (by clicking the blue **ADD** button), we can see that the maintainers list is now in our database! The box might show up with a green highlight at first, indicating that the data has just been added.
 
-![Saved maintainers list](../images/screenshot_save_maintainers.png)
+![Saved maintainers list]({{site.baseurl}}/assets/firebase/screenshot_save_maintainers.png)
 
 If you click on **maintainers**, you should be directed to __https://console.firebase.google.com/project/your-project-id/database/data/maintainers__.
 
-![Maintainers dashboard](../images/screenshot_database_maintainers.png)
+![Maintainers dashboard]({{site.baseurl}}/assets/firebase/screenshot_database_maintainers.png)
 
 Instead of seeing the entire database, this Dashboard allows us to inspect only the **maintainers** object of our database, and any nested data.
 
@@ -69,4 +74,4 @@ You can link directly to a nested object in your project's database.
 
 *Be careful manipulating data through your project's Database console once you populate your database with real data!* You don't want to accidentally ruin or delete the data that makes your application useful to users.
 
-**Step 3:** [Write hard-coded data via the Javascript Library](step3_write_hard_coded_data.md)
+**Step 3:** [Write hard-coded data via the Javascript Library](step3.html)

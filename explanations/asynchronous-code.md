@@ -1,4 +1,7 @@
-# What is asynchronous code execution?
+---
+layout: explanation
+title:  "What is asynchronous code execution?"
+---
 
 Code is a series of instructions, which are run one at a time in sequential order. During normal code execution, an instruction in one function might call out to another function.
 
@@ -6,7 +9,7 @@ At this point, the instructions in the other function begin running and the orig
 
 When the other function is done, it returns to our original code with some return value. Our original code resumes its execution and can do something with that return value. We refer to this as **synchronous** execution.
 
-![Synchronous Diagram](images/diagram_async_01.png)
+![Synchronous Diagram]({{site.baseurl}}/assets/async/diagram_async_01.png)
 
 However, some code operates outside the normal code execution. We refer to this as **asynchronous** execution, and it introduces the possibility for chaos into our otherwise orderly system. This is because the instructions of asynchronous code generally run at the same time as (and totally separate from) the instructions of the rest of our code. This code is doing things in its own happy world, and may (or may not) eventually return with a result.
 
@@ -16,11 +19,11 @@ This request is sent on our behalf, but it takes some time to get all the way th
 
 At some point, the request will complete and will return our data. But there's no way to get this data back to our original code.
 
-![Asynchronous Diagram](images/diagram_async_02.png)
+![Asynchronous Diagram]({{site.baseurl}}/assets/async/diagram_async_02.png)
 
 Instead of trying to get the data back to the original code to do something with it, we tell the asynchronous function what to do when it completes.
 
-![Asynchronous Diagram with Callback](images/diagram_async_03.png)
+![Asynchronous Diagram with Callback]({{site.baseurl}}/assets/async/diagram_async_03.png)
 
 In Javascript, this usually looks like passing a callback function as an argument.
 

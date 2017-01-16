@@ -1,4 +1,7 @@
-# What is JSON?
+---
+layout: explanation
+title:  "What is JSON?"
+---
 
 JSON stands for **Javascript Object Notation** and is a convenient and human-readable way to represent data.
 

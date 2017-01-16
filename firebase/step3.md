@@ -1,12 +1,18 @@
-# Step 3: Write hard-coded data via the Javascript Library
+---
+layout: tutorial
+title:  "Firebase | Step 3: Write hard-coded data via the JavaScript Library"
+tutorial_overview: firebase
+previous_step: step2.html
+next_step: step4.html
+---
 
 ## BEFORE
 
 | You should... | What to Review |
 |------------|--------|
-| ...be able to view and manipulate data in your project's Database console. | [Step 2](step2_write_data_manually.md) |
-| ...know **your-project-id**, the unique description of your database. | [Step 1](step1_setup.md) |
-| ...understand the basics of how clients (like websites) interact with a backend to access data. | [What is a backend and why do I need one?](../../explanations/backend.md) |
+| ...be able to view and manipulate data in your project's Database console. | [Step 2](step2.html) |
+| ...know **your-project-id**, the unique description of your database. | [Step 1](step1.html) |
+| ...understand the basics of how clients (like websites) interact with a backend to access data. | [What is a backend and why do I need one?]({{ site.baseurl }}/explanations/backend.html) |
 
 ## DURING
 
@@ -14,7 +20,7 @@ Manipulating data in our project's Database console is pretty cool, but not part
 
 Let's build out a simple website application. It's going to collect and display recommendations of **Talks You Should Watch**. For example, one of my favorite talks is [this TED Talk](https://www.ted.com/talks/chimamanda_adichie_the_danger_of_a_single_story) by Chimamanda Ngozi Adichie:
 
-![TED Talk Screenshot](../images/screenshot_ted.png)
+![TED Talk Screenshot]({{site.baseurl}}/assets/firebase/screenshot_ted.png)
 
 For each talk recommendation we want to collect:
 
@@ -24,7 +30,7 @@ For each talk recommendation we want to collect:
 
 We probably want to assign each recommendation a unique ID so that we can keep track of it. Here's what a recommendation object might look like in our Firebase database:
 
-![Recommendation object diagram](../images/diagram_app_recommendations.png)
+![Recommendation object diagram]({{site.baseurl}}/assets/firebase/diagram_app_recommendations.png)
 
 If we wanted to represent my talk recommendation above as a JSON object, we could write:
 
@@ -38,18 +44,18 @@ If we wanted to represent my talk recommendation above as a JSON object, we coul
 
 Okay but how do we get that into our Firebase database? That's where our simple website comes into play.
 
-![App Structure Part 1](../images/diagram_app_structure_01.png)
+![App Structure Part 1]({{site.baseurl}}/assets/firebase/diagram_app_structure_01.png)
 
 For now the website will only be available locally, on your computer. It will consist of two files, which should be located in the same directory (or folder) on your machine:
 
 * application.html
 * application.js
 
-![App Structure Part 2](../images/diagram_app_structure_02.png)
+![App Structure Part 2]({{site.baseurl}}/assets/firebase/diagram_app_structure_02.png)
 
 **application.html** will define the layout of our website using HTML. It will also load **application.js**, which will perform different actions on our website using Javascript.
 
-![App Structure Part 3](../images/diagram_app_structure_03.png)
+![App Structure Part 3]({{site.baseurl}}/assets/firebase/diagram_app_structure_03.png)
 
 Some of the actions defined by **application.js** will call out to our Firebase database to read or write data.
 
@@ -61,7 +67,7 @@ Normally, we'd want fairly strict security settings, so that only people that sh
 
 From your project's Database console, navigate to the **RULES** tab.
 
-![Database Rules](../images/screenshot_database_rules.png)
+![Database Rules]({{site.baseurl}}/assets/firebase/screenshot_database_rules.png)
 
 You'll see the default rules. Delete these and replace with the following rules, then click **PUBLISH**.
 
@@ -76,27 +82,27 @@ You'll see the default rules. Delete these and replace with the following rules,
 }
 ```
 
-![Database Rules Updated](../images/screenshot_database_new_rules.png)
+![Database Rules Updated]({{site.baseurl}}/assets/firebase/screenshot_database_new_rules.png)
 
 **Before publishing this app, you should update these rules and remove public read/write access without authentication.**
 
 Okay, back to our regular programming. It's time to check out **application.html** and **application.js** and see how we're going to write data to our Database.
 
-You can access the first version of **application.html** and **application.js** from the [`code_samples/v1`](https://github.com/mchat/tutorials/tree/master/firebase/code_samples/v1) directory of this tutorial.
+You can access the first version of **application.html** and **application.js** from the [`firebase/code_samples/v1`](https://github.com/mchat/tutorials/tree/master/firebase/code_samples/v1) directory of this tutorial.
 
 #### Ways to view and edit code samples:
 
 * Clone this repository from GitHub and open the files directly from the `firebase/code_samples/v1` directory on your local machine.
     - [Learn how to clone a repository.](https://help.github.com/articles/cloning-a-repository/)
-    - [View the main page of this repository.](../../../../)
-* Open the files [**application.html**](../code_samples/v1/application.html) and [**application.js**](../code_samples/v1/application.js). This shows you a nicely formatted version of the file. To access the raw file, click the **Raw** button at the top right of the file.
+    - [View the main page of this repository.](https://github.com/mchat/tutorials)
+* Open the files [**application.html**](code_samples/v1/application.html) and [**application.js**](code_samples/v1/application.js). This shows you a nicely formatted version of the file. To access the raw file, click the **Raw** button at the top right of the file.
     - Right-click the raw file to save directly to your local machine.
     - Or, copy and paste the raw file into your text editor.
 * Copy and paste the code below into your text editor.
 
 Once you've saved these two files on your machine, open them in the text editor of your choice. They should look something like this:
 
-####[application.html](../code_samples/v1/application.html)
+####[application.html](code_samples/v1/application.html)
 ```html
 <html>
   <head>
@@ -114,7 +120,7 @@ Once you've saved these two files on your machine, open them in the text editor 
 </html>
 ```
 
-####[application.js](../code_samples/v1/application.js)
+####[application.js](code_samples/v1/application.js)
 ```javascript
 // TODO: Replace with your project's config object. You can find this
 // by navigating to your project's console overview page
@@ -151,11 +157,11 @@ recommendations.push({
 
 You can find your project's `config` object by navigating to your project's console overview page: __https://console.firebase.google.com/project/your-project-id/overview__. This was the first page we saw when we created our new project. You'll want to click the **Add Firebase to your web app** button.
 
-![Project Overview](../images/screenshot_add_to_web_app.png)
+![Project Overview]({{site.baseurl}}/assets/firebase/screenshot_add_to_web_app.png)
 
 That should open up a modal with some code. Copy just the `config` object (it should look similar to the code outlined in red below):
 
-![Project's config object](../images/screenshot_project_config.png)
+![Project's config object]({{site.baseurl}}/assets/firebase/screenshot_project_config.png)
 
 Replace the default `config` object in **application.js** with your copied `config` object. Now you're good to go!
 
@@ -163,11 +169,11 @@ Open **application.html** in any internet browser. It should work like opening a
 
 In the browser, you should see something that looks like this:
 
-![Hello world!](../images/screenshot_hello_world.png)
+![Hello world!]({{site.baseurl}}/assets/firebase/screenshot_hello_world.png)
 
 Seems pretty boring. But go check your Firebase Dashboard.
 
-![It added data!](../images/screenshot_add_first_recommendation.png)
+![It added data!]({{site.baseurl}}/assets/firebase/screenshot_add_first_recommendation.png)
 
 There's data there! That you added! From a page on your computer!
 
@@ -175,9 +181,9 @@ And it added a really funky string thing. That's the unique URL of the recommend
 
 So if we wanted to link directly to that object, we could open __https://your-project-name.firebaseio.com/recommendations/-KMpGWpa8JCkLUpNnlHW__.
 
-![First recommendation](../images/screenshot_first_recommendation.png)
+![First recommendation]({{site.baseurl}}/assets/firebase/screenshot_first_recommendation.png)
 
-| ![Pause Point](../images/pause_point.png) | You just wrote data to a database in the cloud. That's so legit. If you've never done that before, go tweet about it or something. |
+| ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | You just wrote data to a database in the cloud. That's so legit. If you've never done that before, go tweet about it or something. |
 | --- | --- |
 
 ### EXTRA CREDIT
@@ -196,4 +202,4 @@ You can run and develop a simple website locally.
 
 You can write hard-coded data to your database using the Firebase Javascript library.
 
-**Step 4:** [Write user-generated data](step4_write_dynamic_data.md)
+**Step 4:** [Write user-generated data](step4.html)
