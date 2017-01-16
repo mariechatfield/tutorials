@@ -20,8 +20,8 @@ Right now, your database is pretty empty. All it contains is a reference to your
 
 Everything in Firebase is organized in a hierarchy under this starting reference, as a single JSON object with other JSON objects and data nested inside it.
 
+|---
 | ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | [What is JSON?]({{ site.baseurl }}/explanations/json.html) |
-| --- | --- |
 
 Let's add some data. For now, we just want to keep track of who is maintaining this database. We can think of this as an array of names:
 

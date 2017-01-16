@@ -102,7 +102,8 @@ You can access the first version of **application.html** and **application.js** 
 
 Once you've saved these two files on your machine, open them in the text editor of your choice. They should look something like this:
 
-####[application.html](code_samples/v1/application.html)
+#### [application.html](code_samples/v1/application.html)
+
 ```html
 <html>
   <head>
@@ -120,7 +121,8 @@ Once you've saved these two files on your machine, open them in the text editor 
 </html>
 ```
 
-####[application.js](code_samples/v1/application.js)
+#### [application.js](code_samples/v1/application.js)
+
 ```javascript
 // TODO: Replace with your project's config object. You can find this
 // by navigating to your project's console overview page
@@ -183,8 +185,8 @@ So if we wanted to link directly to that object, we could open __https://your-pr
 
 ![First recommendation]({{site.baseurl}}/assets/firebase/screenshot_first_recommendation.png)
 
+|---
 | ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | You just wrote data to a database in the cloud. That's so legit. If you've never done that before, go tweet about it or something. |
-| --- | --- |
 
 ### EXTRA CREDIT
 

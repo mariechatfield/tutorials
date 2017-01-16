@@ -29,7 +29,8 @@ Go ahead and open up **application.html** and **application.js** from the [`code
 
 Need a refresher on how to download these files? Check out [Step 3](step3.html) — but make sure you download the `v2` versions.
 
-####[application.html](code_samples/v2/application.html)
+#### [application.html](code_samples/v2/application.html)
+
 ```html
 <html>
   <head>
@@ -118,7 +119,8 @@ And in the `<body>`, we add a form:
     </div>
 ```
 
-####[application.js](code_samples/v2/application.js)
+#### [application.js](code_samples/v2/application.js)
+
 ```javascript
 // TODO: Replace with your project's config object. You can find this
 // by navigating to your project's console overview page
@@ -169,8 +171,8 @@ $(window).load(function () {
 
 What's with that last bit of Javascript, with the `$(window).load` and functions inside of functions?
 
+|---
 | ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | [What is asynchronous code execution?]({{site.baseurl}}/explanations/asynchronous-code.html) |
-| --- | --- |
 
 We want to actually submit our recommendation to the database whenever the form is submitted. We use jQuery to listen for the `submit` event on our form. Whenever that event is triggered (by someone clicking the submit button), jQuery responds by calling the handler function we define — which in this case is `submitRecommendation`.
 
@@ -194,8 +196,8 @@ When you submit the form, it should clear all the fields, and save your user-gen
 
 ![Saved the user provided data]({{site.baseurl}}/assets/firebase/screenshot_add_user_generated_data.png)
 
+|---
 | ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | You just wrote user-generated data to a database in the cloud! |
-| --- | --- |
 
 ### EXTRA CREDIT
 

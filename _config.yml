@@ -10,10 +10,12 @@ github_username:  mchat
 personal_website: mariechatfield.com
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 
-redcarpet:
-  extensions: ["tables", "with_toc_data"]
+kramdown:
+  # Enable GitHub Flavored Markdown (fenced code blocks)
+  input: GFM
+  auto_ids: true
 
 defaults:
   -
