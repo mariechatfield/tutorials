@@ -1,29 +1,35 @@
-# Step 4: Write user-generated data
+---
+layout: tutorial
+title:  "Firebase | Step 4: Write user-generated data"
+tutorial_overview: firebase
+previous_step: step3.html
+next_step: step5.html
+---
 
 ## BEFORE
 
 | You should... | What to Review |
 |------------|--------|
-| ...be able to view and edit the provided code samples on your computer. | [Step 3](step3_write_hard_coded_data.md) |
-| ...be able to write hard-coded data to your Firebase database using the Javascript library. | [Step 3](step3_write_hard_coded_data.md) |
-| ...know **your-project-id**, the unique description of your database. | [Step 1](step1_setup.md) |
-| ...understand the basics of how clients (like websites) interact with a backend to access data. | [What is a backend and why do I need one?](../../explanations/backend.md) |
+| ...be able to view and edit the provided code samples on your computer. | [Step 3](step3.html) |
+| ...be able to write hard-coded data to your Firebase database using the Javascript library. | [Step 3](step3.html) |
+| ...know **your-project-id**, the unique description of your database. | [Step 1](step1.html) |
+| ...understand the basics of how clients (like websites) interact with a backend to access data. | [What is a backend and why do I need one?]({{site.baseurl}}/explanations/backend.html) |
 
 ## DURING
 
 What happens if you refresh **application.html** in your browser?
 
-![It added more data!](../images/screenshot_add_another_recommendation.png)
+![It added more data!]({{site.baseurl}}/assets/firebase/screenshot_add_another_recommendation.png)
 
 It adds the exact same object to your Firebase database! Again. That's kind of cool. But it's also a bit pointless.
 
 We can keep refreshing this page forever but it's just going to keep adding the exact same recommendation to our database over and over again. We probably want users to be able to give us some data. So let's make a form!
 
-Go ahead and open up **application.html** and **application.js** from the [`code_samples/v2`](../code_samples/v2) directory.
+Go ahead and open up **application.html** and **application.js** from the [`code_samples/v2`](code_samples/v2) directory.
 
-Need a refresher on how to download these files? Check out [Step 3](step3_write_hard_coded_data.md) — but make sure you download the `v2` versions.
+Need a refresher on how to download these files? Check out [Step 3](step3.html) — but make sure you download the `v2` versions.
 
-####[application.html](../code_samples/v2/application.html)
+####[application.html](code_samples/v2/application.html)
 ```html
 <html>
   <head>
@@ -112,7 +118,7 @@ And in the `<body>`, we add a form:
     </div>
 ```
 
-####[application.js](../code_samples/v2/application.js)
+####[application.js](code_samples/v2/application.js)
 ```javascript
 // TODO: Replace with your project's config object. You can find this
 // by navigating to your project's console overview page
@@ -163,7 +169,7 @@ $(window).load(function () {
 
 What's with that last bit of Javascript, with the `$(window).load` and functions inside of functions?
 
-| ![Pause Point](../images/pause_point.png) | [What is asynchronous code execution?](../../explanations/asynchronous.md) |
+| ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | [What is asynchronous code execution?]({{site.baseurl}}/explanations/asynchronous-code.html) |
 | --- | --- |
 
 We want to actually submit our recommendation to the database whenever the form is submitted. We use jQuery to listen for the `submit` event on our form. Whenever that event is triggered (by someone clicking the submit button), jQuery responds by calling the handler function we define — which in this case is `submitRecommendation`.
@@ -178,22 +184,22 @@ Want to learn more about how events work in jQuery? Check out this excellent int
 
 Refresh **application.html** again. This time, it shouldn't auto-save any data to your Firebase. What you'll see looks a lot prettier, thanks to Bootstrap.
 
-![Blank form](../images/screenshot_blank_form.png)
+![Blank form]({{site.baseurl}}/assets/firebase/screenshot_blank_form.png)
 
 Go ahead and fill out the form. You'll notice that Bootstrap does some cool magic and will give you an error if you try to submit the form without giving a proper URL for the link input.
 
-![Filled out form](../images/screenshot_filled_out_form.png)
+![Filled out form]({{site.baseurl}}/assets/firebase/screenshot_filled_out_form.png)
 
 When you submit the form, it should clear all the fields, and save your user-generated data to your Firebase!
 
-![Saved the user provided data](../images/screenshot_add_user_generated_data.png)
+![Saved the user provided data]({{site.baseurl}}/assets/firebase/screenshot_add_user_generated_data.png)
 
-| ![Pause Point](../images/pause_point.png) | You just wrote user-generated data to a database in the cloud! |
+| ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | You just wrote user-generated data to a database in the cloud! |
 | --- | --- |
 
 ### EXTRA CREDIT
 
-1. For every additional field you defined on recommendations in the [Step 3 Extra Credit](step3_write_hard_coded_data.md), add an additional input to the `recommendationsForm` HTML.
+1. For every additional field you defined on recommendations in the [Step 3 Extra Credit](step3.html), add an additional input to the `recommendationsForm` HTML.
     - [HTML input types](http://www.w3schools.com/html/html_form_input_types.asp) — indicates the types of inputs you can specify with base HTML
     - [Bootstrap inputs](http://getbootstrap.com/css/#inputs) - indicates how you can style inputs with Bootstrap
 2. For every additional form input you add, use jQuery to get its value and then send that value to your database.
@@ -208,7 +214,7 @@ When you submit the form, it should clear all the fields, and save your user-gen
 
 ## AFTER
 
-You understand the basics of [asynchronous code execution](../../explanations/asynchronous.md).
+You understand the basics of [asynchronous code execution]({{site.baseurl}}/explanations/asynchronous-code.html).
 
 You can use the [jQuery](https://jquery.com/) library to select and manipulate HTML elements.
 
@@ -216,4 +222,4 @@ You can use the [Bootstrap](http://getbootstrap.com/) framework to style HTML el
 
 You can write dynamic, user-generated data to your database.
 
-**Step 5:** [Read user-generated data](step5_read_dynamic_data.md)
+**Step 5:** [Read user-generated data](step5.html)

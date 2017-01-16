@@ -1,24 +1,30 @@
-# Step 5: Read user-generated data
+---
+layout: tutorial
+title:  "Firebase | Step 5: Read user-generated data"
+tutorial_overview: firebase
+previous_step: step4.html
+next_step: step6.html
+---
 
 ## BEFORE
 
 | You should... | What to Review |
 |------------|--------|
-| ...be able to view and edit the provided code samples on your computer. | [Step 3](step3_write_hard_coded_data.md) |
-| ...understand the basics of asynchronous code execution. | [What is asynchronous code execution?](../../explanations/asynchronous.md) |
-| ...be able to write user-generated data to your Firebase database using the Javascript library. | [Step 4](step4_write_dynamic_data.md) |
-| ...know **your-project-id**, the unique description of your database. | [Step 1](step1_setup.md) |
-| ...understand the basics of how clients (like websites) interact with a backend to access data. | [What is a backend and why do I need one?](../../explanations/backend.md) |
+| ...be able to view and edit the provided code samples on your computer. | [Step 3](step3.html) |
+| ...understand the basics of asynchronous code execution. | [What is asynchronous code execution?]({{site.baseurl}}/explanations/asynchronous-code.html) |
+| ...be able to write user-generated data to your Firebase database using the Javascript library. | [Step 4](step4.html) |
+| ...know **your-project-id**, the unique description of your database. | [Step 1](step1.html) |
+| ...understand the basics of how clients (like websites) interact with a backend to access data. | [What is a backend and why do I need one?]({{site.baseurl}}/explanations/backend.html) |
 
 ## DURING
 
 Writing data is pretty cool, but users probably also want to read some of the data they're writing. Let's show them the most recent recommendation — and let's have it auto-refresh for them. REALTIME. MAGIC.
 
-Go ahead and open up **application.html** and **application.js** from the [`code_samples/v3`](../code_samples/v3) directory.
+Go ahead and open up **application.html** and **application.js** from the [`code_samples/v3`](code_samples/v3) directory.
 
-Need a refresher on how to download these files? Check out [Step 3](step3_write_hard_coded_data.md) — but make sure you download the `v3` versions.
+Need a refresher on how to download these files? Check out [Step 3](step3.html) — but make sure you download the `v3` versions.
 
-####[application.html](../code_samples/v3/application.html)
+####[application.html](code_samples/v3/application.html)
 ```html
 <html>
   <head>
@@ -109,7 +115,7 @@ Once again, this is mostly the same as `v2` but we did add an extra table to the
       </table>
 ```
 
-####[application.js](../code_samples/v3/application.js)
+####[application.js](code_samples/v3/application.js)
 ```javascript
 // TODO: Replace with your project's config object. You can find this
 // by navigating to your project's console overview page
@@ -202,24 +208,24 @@ That `.on()` method should look familiar to you if you did the extra credit in S
 
 When you reload **application.html**, it should look something like this.
 
-![Read first recommendation data](../images/screenshot_read_recommendation.png)
+![Read first recommendation data]({{site.baseurl}}/assets/firebase/screenshot_read_recommendation.png)
 
 It should go ahead and read the last recommendation that you saved to your Firebase. But what happens if you add another recommendation?
 
-![Submit another recommendation](../images/screenshot_submit_another.png)
+![Submit another recommendation]({{site.baseurl}}/assets/firebase/screenshot_submit_another.png)
 
 IT REFRESHES! And shows that one. Open **application.html** in another window and submit another recommendation there. Watch the original window – it should update automatically!
 
-![Read another recommendation](../images/screenshot_read_another.png)
+![Read another recommendation]({{site.baseurl}}/assets/firebase/screenshot_read_another.png)
 
 Look at that asynchronous code execution wizardry. You are a data magician already.
 
-| ![Pause Point](../images/pause_point.png) | You are reading and writing real-time user-generated data to a database in the cloud!| 
+| ![Pause Point]({{site.baseurl}}/assets/firebase/pause_point.png) | You are reading and writing real-time user-generated data to a database in the cloud!| 
 | --- | --- |
 
 ### EXTRA CREDIT
 
-1. For every additional input you added to your form in the [Step 4 Extra Credit](step4_write_dynamic_data.md), add an additional column to the table HTML.
+1. For every additional input you added to your form in the [Step 4 Extra Credit](step4.html), add an additional column to the table HTML.
     - [HTML forms](http://www.w3schools.com/html/html_tables.asp) - indicates the markup used to create HTML tables
 2. For every additional table column you add, use jQuery to set its HTML and display the corresponding data from the last recommendation read
     - [jQuery selectors](http://www.w3schools.com/jquery/jquery_ref_selectors.asp) - explains how to select different HTML elements using jQuery
@@ -246,4 +252,4 @@ You can attach event listeners using the [jQuery](https://jquery.com/) library a
 
 You can read user-generated data from your database in real-time.
 
-**Step 6:** [Advanced topics in data wizardry](step6_advanced_topics.md)
+**Step 6:** [Advanced topics in data wizardry](step6.html)

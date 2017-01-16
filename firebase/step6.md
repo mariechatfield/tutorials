@@ -1,12 +1,17 @@
-# Step 6: Advanced topics in data wizardry
+---
+layout: tutorial
+title:  "Firebase | Step 6: Advanced topics in data wizardry"
+tutorial_overview: firebase
+previous_step: step5.html
+---
 
 ## BEFORE
 
 | You should... | What to Review |
 |------------|--------|
-| ...be able to read and write real-time user-generated data to your Firebase database using the Javascript library. | [Step 5](step5_read_dynamic_data.md) |
-| ...understand the basics of asynchronous code execution. | [What is asynchronous code execution?](../../explanations/asynchronous.md) | 
-| ...understand the basics of how clients (like websites) interact with a backend to access data. | [What is a backend and why do I need one?](../../explanations/backend.md) |
+| ...be able to read and write real-time user-generated data to your Firebase database using the Javascript library. | [Step 5](step5.html) |
+| ...understand the basics of asynchronous code execution. | [What is asynchronous code execution?]({{site.baseurl}}/explanations/asynchronous-code.html) | 
+| ...understand the basics of how clients (like websites) interact with a backend to access data. | [What is a backend and why do I need one?]({{site.baseurl}}/explanations/backend.html) |
 
 ## DURING
 
@@ -16,7 +21,7 @@ That's pretty legit. But there's some more stuff you should probably do. You mig
 
 **Wait a second, what's preventing anyone from writing and reading all the data in my database? Or deleting it? Or keeping random stuff in my database that doesn't have anything to do with talk recommendations?**
 
-Nothing. You're right to be concerned about that. You should probably edit the awful security rules we added in [Step 3](step3_write_hard_coded_data.md) and replace them with better security rules. Read the [Security docs](https://firebase.google.com/docs/reference/security/database/) on Firebase to learn how to limit access to your database, and validate that requests are sending the right kind of data.
+Nothing. You're right to be concerned about that. You should probably edit the awful security rules we added in [Step 3](step3.html) and replace them with better security rules. Read the [Security docs](https://firebase.google.com/docs/reference/security/database/) on Firebase to learn how to limit access to your database, and validate that requests are sending the right kind of data.
 
 **What if I want people to be able to log in to my website/app? Can I have users?**
 

@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Tutorials</h1>
+
+  <ul class="post-list">
+    {% for post in site.pages %}
+      {% if post.layout == 'tutorial' and post.is_overview %}
+        <li>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+
+          <p>{{ post.description }}</p>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <h1 class="page-heading">Explanations</h1>
+
+  <ul class="post-list">
+    {% for post in site.pages %}
+      {% if post.layout == 'explanation' %}
+        <li>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+</div>
