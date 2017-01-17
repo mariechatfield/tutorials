@@ -23,4 +23,13 @@ layout: default
     {{ content }}
   </article>
 
+  <footer>
+    <p class="post-meta">
+      {% if page.tutorial_overview %}<a href="{{site.baseurl}}/{{page.tutorial_overview}}">Tutorial Overview</a> • {% endif %}
+      {% if page.previous_step %}<a href="{{page.previous_step}}">Previous Step</a>{% endif %}
+      {% if page.previous_step and page.next_step %} • {% endif %}
+      {% if page.next_step %}<a href="{{page.next_step}}">Next Step</a>{% endif %}
+    </p>
+  </footer>
+
 </div>
