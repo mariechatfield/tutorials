@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title:  "Firebase Tutorial"
+title:  "Data the easy way with Firebase"
 categories: firebase
 next_step: /tutorials/firebase/step1.html
 is_overview: true
