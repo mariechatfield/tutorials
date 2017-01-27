@@ -15,6 +15,7 @@ description: "Create a simple web app and server from scratch and deploy to Hero
 3. [Add more content to your Ember app](step3.html)
 4. [Create a server with Express](step4.html)
 5. [Add an interactive Ember route](step5.html)
+6. [Create a new GitHub repository](step6.html)
 
 ## What You Should Know Before You Begin
 
