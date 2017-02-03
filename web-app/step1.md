@@ -10,7 +10,7 @@ next_step: step2.html
 ## Pre-requisities
 
 |--- 
-| ![Pause Point]({{site.baseurl}}/assets/general/pause_point.png) | [What is a backend and why do I need one?]({{site.base-url}}/explanations/backend.htmlz) |
+| ![Pause Point]({{site.baseurl}}/assets/general/pause_point.png) | [What is a backend and why do I need one?]({{site.baseurl}}/explanations/backend.html) |
 
 ---
 
