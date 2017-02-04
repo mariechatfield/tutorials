@@ -143,7 +143,7 @@ If you haven't already, this would be a good time to save all your changes with 
 
 ## Review
 
-You added content to the index route of your Ember application and learned about {% raw %}`{{outlet}}`{% endraw %} Handlbears helper and nested routes.
+You added content to the index route of your Ember application and learned about {% raw %}`{{outlet}}`{% endraw %} Handlebars helper and nested routes.
 
 You created a new route and template using Ember CLI.
 
