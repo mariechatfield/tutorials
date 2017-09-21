@@ -77,9 +77,11 @@ Using jQuery's [`getJSON`](http://api.jquery.com/jquery.getjson/) method, then m
 
 We can now display our `model` in `app/templates/greeting.hbs`. In our back end server, definition, we return an object with `greeting` defined: `{ greeting }`. Let's render `model.greeting` in our template for the route.
 
+{% raw %}
 ```hbs
 <h2>{{model.greeting}}</h2>
 ```
+{% endraw %}
 
 Visit `http://localhost:4200/sayHelloTo/Marie` and you should see something like this:
 
